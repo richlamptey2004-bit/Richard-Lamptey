@@ -1,0 +1,6 @@
+{
+  "name": "ESTCHAY LUX LADY’S BAGS",
+  "description": "Boutique ladies' handbags, totes, purses and handbag sets in Ghana with convenient WhatsApp ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
