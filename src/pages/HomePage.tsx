@@ -57,87 +57,63 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate, onSelectProduct })
 
   return (
     <div className="space-y-20 sm:space-y-28 pb-20">
-      {/* 1. HERO SECTION (Split Editorial Layout) */}
-      <section className="relative overflow-hidden bg-[#F8F5EF] pt-8 sm:pt-14 pb-12 border-b border-[#D8CBBE]/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-6">
-              {/* Eyebrow */}
-              <div className="text-xs uppercase tracking-[0.2em] font-semibold text-[#B99A64]">
-                {hero.eyebrow}
-              </div>
+      {/* 1. HERO SECTION (Editorial Background Layout) */}
+      <section 
+        className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#241C19]"
+        style={{
+          backgroundImage: `url('https://i.ibb.co/B5YHmjsH/Whats-App-Image-2026-09-01-at-23-46-32.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Editorial Scrim for Text Legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#241C19]/90 via-[#241C19]/40 to-transparent" />
+        <div className="absolute inset-0 bg-black/20" />
 
-              {/* Heading */}
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#241C19] text-balance leading-[1.1]">
-                {hero.heading}
-              </h1>
-
-              {/* Supporting Text */}
-              <p className="text-base sm:text-lg text-[#241C19]/80 max-w-xl font-normal leading-relaxed">
-                {hero.supporting_text}
-              </p>
-
-              {/* Actions */}
-              <div className="pt-2 flex flex-wrap items-center gap-4">
-                <button
-                  onClick={() => navigate('/shop')}
-                  className="px-6 py-3.5 bg-[#241C19] text-[#F8F5EF] text-sm font-medium hover:bg-[#6D2638] transition-colors rounded-xs shadow-xs inline-flex items-center gap-2 group whitespace-nowrap shrink-0"
-                >
-                  <span>{hero.primary_cta_label}</span>
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </button>
-
-                <button
-                  onClick={() => navigate('/about')}
-                  className="px-6 py-3.5 bg-transparent border border-[#241C19]/30 text-[#241C19] text-sm font-medium hover:bg-[#FFFEFC] hover:border-[#241C19] transition-colors rounded-xs whitespace-nowrap shrink-0"
-                >
-                  {hero.secondary_cta_label}
-                </button>
-              </div>
-
-              {/* Subtle Trust Indicators */}
-              <div className="pt-6 border-t border-[#D8CBBE]/40 flex flex-wrap items-center gap-6 text-xs text-[#241C19]/70">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#B99A64]" />
-                  <span>Ghana Nationwide Delivery</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#B99A64]" />
-                  <span>Personal WhatsApp Confirmation</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#B99A64]" />
-                  <span>Priced in Ghanaian Cedis (GH₵)</span>
-                </div>
-              </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 sm:py-32">
+          <div className="max-w-2xl space-y-6 sm:space-y-8">
+            {/* Eyebrow */}
+            <div className="text-xs sm:text-sm uppercase tracking-[0.3em] font-bold text-[#B99A64]">
+              {hero.eyebrow}
             </div>
 
-            {/* Right Visual Column (Editorial Handbag Showcase) */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-sm overflow-hidden bg-[#FFFEFC] border border-[#D8CBBE] shadow-xl p-4 sm:p-6">
-                <HandbagVisual
-                  slug="classic-tote-collection"
-                  name="ESTCHAY Signature Collection"
-                  className="w-full h-80 sm:h-96"
-                />
-                <div className="mt-4 pt-4 border-t border-[#D8CBBE]/40 flex items-center justify-between">
-                  <div>
-                    <span className="text-[11px] uppercase tracking-wider text-[#B99A64] block font-medium">
-                      Featured In Signature Green
-                    </span>
-                    <h3 className="font-serif text-lg font-semibold text-[#241C19]">
-                      Classic Tote Collection
-                    </h3>
-                  </div>
-                  <button
-                    onClick={() => navigate('/shop?category=tote-bags')}
-                    className="text-xs font-semibold text-[#6D2638] hover:underline flex items-center gap-1"
-                  >
-                    <span>View Details</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
+            {/* Heading */}
+            <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#FFFEFC] text-balance leading-[1.1]">
+              {hero.heading}
+            </h1>
+
+            {/* Supporting Text */}
+            <p className="text-base sm:text-xl text-[#F8F5EF]/90 max-w-lg font-normal leading-relaxed">
+              {hero.supporting_text}
+            </p>
+
+            {/* Actions */}
+            <div className="pt-4 flex flex-wrap items-center gap-4 sm:gap-6">
+              <button
+                onClick={() => navigate('/shop')}
+                className="px-8 py-4 bg-[#FFFEFC] text-[#241C19] text-sm sm:text-base font-bold hover:bg-[#B99A64] hover:text-[#241C19] transition-all rounded-xs shadow-lg inline-flex items-center gap-2 group whitespace-nowrap shrink-0"
+              >
+                <span>{hero.primary_cta_label}</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
+              </button>
+
+              <button
+                onClick={() => navigate('/about')}
+                className="px-8 py-4 bg-transparent border-2 border-[#FFFEFC]/40 text-[#FFFEFC] text-sm sm:text-base font-bold hover:bg-[#FFFEFC] hover:text-[#241C19] hover:border-[#FFFEFC] transition-all rounded-xs whitespace-nowrap shrink-0 backdrop-blur-sm"
+              >
+                {hero.secondary_cta_label}
+              </button>
+            </div>
+
+            {/* Subtle Trust Indicators */}
+            <div className="pt-8 sm:pt-12 border-t border-[#FFFEFC]/20 flex flex-wrap items-center gap-6 sm:gap-8 text-xs sm:text-sm text-[#FFFEFC]/80 font-medium">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#B99A64]" />
+                <span>Nationwide Ghana Delivery</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#B99A64]" />
+                <span>WhatsApp Confirmation</span>
               </div>
             </div>
           </div>

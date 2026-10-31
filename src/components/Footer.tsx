@@ -109,11 +109,11 @@ export const Footer: React.FC<FooterProps> = ({ navigate }) => {
               </a>
 
               <a
-                href="mailto:info@estchaybags.com"
+                href="mailto:chayestee1@mail.com"
                 className="flex items-center gap-2 hover:text-[#B99A64] transition-colors"
               >
                 <Mail className="w-4 h-4 text-[#B99A64] shrink-0" />
-                <span>info@estchaybags.com</span>
+                <span>chayestee1@mail.com</span>
               </a>
 
               <p className="text-xs text-[#D8CBBE]/70 pt-2 leading-relaxed">

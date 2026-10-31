@@ -120,13 +120,13 @@ export const ContactPage: React.FC = () => {
                 Official Business Email
               </span>
               <a
-                href="mailto:info@estchaybags.com"
+                href="mailto:chayestee1@mail.com"
                 className="p-3 bg-[#F8F5EF] hover:bg-[#EFEAE2] border border-[#D8CBBE]/60 text-[#241C19] rounded-xs transition-colors flex items-center gap-3"
               >
                 <Mail className="w-4 h-4 text-[#B99A64] shrink-0" />
                 <div>
                   <span className="text-xs font-semibold block">Email Address</span>
-                  <span className="text-xs">info@estchaybags.com</span>
+                  <span className="text-xs">chayestee1@mail.com</span>
                 </div>
               </a>
             </div>

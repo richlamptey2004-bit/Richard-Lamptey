@@ -33,7 +33,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       if (savedSession === 'true' || savedPreview === 'true') {
         setUser({
           id: 'admin-01',
-          email: 'admin@estchaybags.com',
+          email: 'chayestee1@mail.com',
           role: 'admin',
           isPreviewAdmin: savedPreview === 'true',
         });
@@ -100,7 +100,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     if (password === BOUTIQUE_PASSWORD) {
       const adminUser: AdminUser = {
         id: 'admin-01',
-        email: 'admin@estchaybags.com',
+        email: 'chayestee1@mail.com',
         role: 'admin',
       };
       setUser(adminUser);

@@ -353,7 +353,7 @@ export const DEFAULT_STORE_SETTINGS: StoreSettings = {
     name: 'ESTCHAY LUX LADY’S BAGS',
     phone: '0548003400',
     whatsapp: '233548003400',
-    email: 'info@estchaybags.com',
+    email: 'chayestee1@mail.com',
     market: 'Ghana',
     currency_symbol: 'GH₵',
     currency_code: 'GHS',
